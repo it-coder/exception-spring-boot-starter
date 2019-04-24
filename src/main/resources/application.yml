@@ -1,0 +1,13 @@
+
+exception-handle:
+  project-name: rc-common
+  email:
+    from: ceshi@163.com
+    to:
+      - ceshi@139.com
+spring:
+  mail:
+    host: smtp.163.com
+    port: 25
+    password: ceshi123456
+    username: ceshi@163.com
