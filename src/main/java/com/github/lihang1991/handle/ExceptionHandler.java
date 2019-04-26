@@ -4,15 +4,12 @@ import com.github.lihang1991.entity.ExceptionNotice;
 import com.github.lihang1991.notice.EmailNoticeComponent;
 import com.github.lihang1991.property.ExceptionSettingProperties;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * 错误消息处理
  *
  * @author lih
- * @create 2019-04-20-10:12.
+ * @date 2019-04-20-10:12.
  */
-@Slf4j
 public class ExceptionHandler {
 
     private EmailNoticeComponent emailNoticeComponent;

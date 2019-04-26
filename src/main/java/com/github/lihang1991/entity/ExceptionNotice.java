@@ -5,16 +5,11 @@ import static java.util.stream.Collectors.toList;
 import java.util.Arrays;
 import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  *  异常消息体
  * @author lih
- * @create 2019-04-20-10:52.
+ * @date 2019-04-20-10:52.
  */
-@Setter
-@Getter
 public class ExceptionNotice {
 
     /**
@@ -87,5 +82,62 @@ public class ExceptionNotice {
         stringBuilder.append("异常追踪：").append("\r\n").append(String.join("\r\n", traceInfo)).append("\r\n");
         return stringBuilder.toString();
 
+    }
+
+
+    public String getProject() {
+        return project;
+    }
+
+    public void setProject(String project) {
+        this.project = project;
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getMethodName() {
+        return methodName;
+    }
+
+    public void setMethodName(String methodName) {
+        this.methodName = methodName;
+    }
+
+    public List<Object> getParames() {
+        return parames;
+    }
+
+    public void setParames(List<Object> parames) {
+        this.parames = parames;
+    }
+
+    public String getClassPath() {
+        return classPath;
+    }
+
+    public void setClassPath(String classPath) {
+        this.classPath = classPath;
+    }
+
+    public String getExceptionMessage() {
+        return exceptionMessage;
+    }
+
+    public void setExceptionMessage(String exceptionMessage) {
+        this.exceptionMessage = exceptionMessage;
+    }
+
+    public List<String> getTraceInfo() {
+        return traceInfo;
+    }
+
+    public void setTraceInfo(List<String> traceInfo) {
+        this.traceInfo = traceInfo;
     }
 }

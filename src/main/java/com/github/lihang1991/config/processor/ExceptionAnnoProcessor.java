@@ -19,7 +19,7 @@ import com.google.auto.service.AutoService;
  * 注解处理器
  *
  * @author lih
- * @create 2019-04-22-19:13.
+ * @date 2019-04-22 19:13.
  */
 @AutoService(Processor.class)
 public class ExceptionAnnoProcessor extends AbstractProcessor {
@@ -88,7 +88,7 @@ public class ExceptionAnnoProcessor extends AbstractProcessor {
     private void createFile(List<String> settings, Writer writer) throws IOException {
         writer.write("package " + settings.get(0) + ";\n"
             + "import com.lihang.exception.handle.ExceptionHandler;\n" +
-                "import lombok.extern.slf4j.Slf4j;\n" +
+
                 "import org.aspectj.lang.JoinPoint;\n" +
                 "import org.aspectj.lang.annotation.AfterThrowing;\n" +
                 "import org.aspectj.lang.annotation.Aspect;\n" +
@@ -102,8 +102,8 @@ public class ExceptionAnnoProcessor extends AbstractProcessor {
                 " */\n" +
                 "@Aspect\n" +
                 "@Configuration\n" +
-                "@Slf4j\n" +
                 "public class ExceptionAspect {\n" +
+                "private static final Logger log = LoggerFactory.getLogger(ExceptionAspect.class);\n" +
                 "\n" +
                 "    private ExceptionHandler exceptionHandler;\n" +
                 "\n" +
@@ -132,7 +132,7 @@ public class ExceptionAnnoProcessor extends AbstractProcessor {
 
     /**
      *  手动编译
-     * @param path
+     * @param path 路径
      */
     public void compile(String path) throws IOException {
         // 拿到系统编译器
@@ -150,7 +150,7 @@ public class ExceptionAnnoProcessor extends AbstractProcessor {
 
     /**
      * 读取包名
-     * @param name
+     * @param name 包名
      */
     private String getPackage(String name) {
         String result = name;

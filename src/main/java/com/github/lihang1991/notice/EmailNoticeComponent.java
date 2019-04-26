@@ -13,7 +13,7 @@ import com.github.lihang1991.property.ExceptionEmailProperties;
  * 邮件发送组件
  *
  * @author lih
- * @create 2019-04-20-10:01.
+ * @date 2019-04-20-10:01.
  */
 public class EmailNoticeComponent {
 

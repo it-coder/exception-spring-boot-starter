@@ -15,7 +15,7 @@ import org.springframework.mail.MailSender;
 /**
  *  自动装配
  * @author lih
- * @create 2019-04-20-9:31.
+ * @date 2019-04-20-9:31.
  */
 @Configuration
 @EnableConfigurationProperties({ ExceptionEmailProperties.class, ExceptionSettingProperties.class})

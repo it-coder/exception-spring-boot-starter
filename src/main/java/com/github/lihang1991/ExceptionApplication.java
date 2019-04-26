@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author lih
- * @create 2019-04-19-19:02.
+ * @date 2019-04-19-19:02.
  */
 @SpringBootApplication
 public class ExceptionApplication {
