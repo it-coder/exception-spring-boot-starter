@@ -2,14 +2,14 @@
 
 ## 使用
 
-> 该jar正在申请发布到中央仓库(地址待完善)
+> 1.0.2之前的bug存在bug,该版本已修复
 
 + maven引用
 ``` xml
 <dependency>
     <groupId>com.github.lihang1991</groupId>
     <artifactId>exception-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.2-RELEASE</version>
 </dependency>
 ```
 
