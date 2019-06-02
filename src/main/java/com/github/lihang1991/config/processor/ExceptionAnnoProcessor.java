@@ -13,7 +13,6 @@ import javax.lang.model.util.Elements;
 import javax.tools.*;
 
 import com.github.lihang1991.annotation.EnableExceptionHandle;
-import com.google.auto.service.AutoService;
 
 /**
  * 注解处理器
@@ -21,7 +20,7 @@ import com.google.auto.service.AutoService;
  * @author lih
  * @date 2019-04-22 19:13.
  */
-@AutoService(Processor.class)
+//@AutoService(Processor.class)
 public class ExceptionAnnoProcessor extends AbstractProcessor {
     private Messager messager; //用于打印日志
     private Elements elementUtils; //用于处理元素
@@ -87,7 +86,7 @@ public class ExceptionAnnoProcessor extends AbstractProcessor {
 
     private void createFile(List<String> settings, Writer writer) throws IOException {
         writer.write("package " + settings.get(0) + ";\n"
-            + "import com.lihang.exception.handle.ExceptionHandler;\n" +
+            + "import com.github.lihang1991.handle.ExceptionHandler;\n" +
 
                 "import org.aspectj.lang.JoinPoint;\n" +
                 "import org.aspectj.lang.annotation.AfterThrowing;\n" +
@@ -95,6 +94,8 @@ public class ExceptionAnnoProcessor extends AbstractProcessor {
                 "import org.springframework.context.annotation.Configuration;\n" +
                 "\n" +
                 "import java.util.Arrays;\n" +
+                "import org.slf4j.Logger;\n" +
+                "import org.slf4j.LoggerFactory;" +
                 "\n" +
                 "/**\n" +
                 " * @author lih\n" +

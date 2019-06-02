@@ -6,7 +6,7 @@
 
     <groupId>com.github.lihang1991</groupId>
     <artifactId>exception-spring-boot-starter</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>1.0.2-RELEASE</version>
 
     <name>exception-spring-boot-starter</name>
     <description>系统错误信息通过发邮件方式自动提醒</description>
@@ -45,11 +45,11 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.auto.service</groupId>
-            <artifactId>auto-service</artifactId>
-            <version>1.0-rc2</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.google.auto.service</groupId>-->
+            <!--<artifactId>auto-service</artifactId>-->
+            <!--<version>1.0-rc2</version>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>

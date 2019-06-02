@@ -1,5 +1,7 @@
 package com.github.lihang1991.entity;
 
+import org.springframework.util.DigestUtils;
+
 import static java.util.stream.Collectors.toList;
 
 import java.util.Arrays;
@@ -59,6 +61,8 @@ public class ExceptionNotice {
             this.methodName = list.get(0).getMethodName();
             this.classPath = list.get(0).getClassName();
         }
+        // 生成错误标识，用于限制错误的重复发送
+        this.uid = calUid();
     }
 
 
@@ -82,6 +86,11 @@ public class ExceptionNotice {
         stringBuilder.append("异常追踪：").append("\r\n").append(String.join("\r\n", traceInfo)).append("\r\n");
         return stringBuilder.toString();
 
+    }
+
+    private String calUid() {
+        String md5 = DigestUtils.md5DigestAsHex(String.format("%s-%s", exceptionMessage, traceInfo.get(0)).getBytes());
+        return md5;
     }
 
 
