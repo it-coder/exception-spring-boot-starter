@@ -20,8 +20,6 @@ public class ExceptionHandler {
 
     private ExceptionSettingProperties exceptionSettingProperties;
 
-
-
     private Set<String> UNIQUE_CHECK = Collections.synchronizedSet(new HashSet<>());
 
     public ExceptionHandler(EmailNoticeComponent emailNoticeComponent, ExceptionSettingProperties exceptionSettingProperties) {

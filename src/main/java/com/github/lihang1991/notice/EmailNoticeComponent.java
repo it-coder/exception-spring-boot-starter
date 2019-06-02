@@ -15,7 +15,7 @@ import com.github.lihang1991.property.ExceptionEmailProperties;
  * @author lih
  * @date 2019-04-20-10:01.
  */
-public class EmailNoticeComponent {
+public class EmailNoticeComponent implements INoticeComponent {
 
     MailSender mailSender;
 
@@ -57,6 +57,7 @@ public class EmailNoticeComponent {
         }
     }
 
+    @Override
     public void send(ExceptionNotice exceptionNotice) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         String fromEmail = exceptionEmailProperties.getFrom();

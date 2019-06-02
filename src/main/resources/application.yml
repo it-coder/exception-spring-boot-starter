@@ -5,6 +5,11 @@ exception-handle:
     from: ceshi@163.com
     to:
       - ceshi@139.com
+  dingtalk:
+    phone:
+      - 123
+      - 234
+    webhook: https://oapi.dingtalk.com/robot/send?access_token=d89e28c75ff21466c25f0c267e8b73ac5afdf8be1fbb618885418ab39c5eb5e3
 spring:
   mail:
     host: smtp.163.com
